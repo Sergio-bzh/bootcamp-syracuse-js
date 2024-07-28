@@ -8,11 +8,11 @@ function syracuse(inputNumber) {
 
     // Je force la conversion de l'imput en nombre (car l'on reçoit un string)
     inputNumber = inputNumber * 1;
-    
+    // Je crée une variable servira à afficher la suite de Syracuse
     const syracuseTable = [inputNumber];
 
+    // Utilisation d'une boucle while car c'est la mieux adaptée dans ce contexte
     while(inputNumber !== 1){
-        console.log(inputNumber)
         if(inputNumber % 2 === 1){
             inputNumber = inputNumber * 3 + 1;
             syracuseTable.push(inputNumber);
@@ -21,7 +21,6 @@ function syracuse(inputNumber) {
             syracuseTable.push(inputNumber);
         }
     }
-    console.log(syracuse);
     return syracuseTable;
 }
 
