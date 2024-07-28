@@ -5,7 +5,24 @@
  * @return la série complète générée
  */
 function syracuse(inputNumber) {
+
+    // Je force la conversion de l'imput en nombre (car l'on reçoit un string)
+    inputNumber = inputNumber * 1;
     
+    const syracuseTable = [inputNumber];
+
+    while(inputNumber !== 1){
+        console.log(inputNumber)
+        if(inputNumber % 2 === 1){
+            inputNumber = inputNumber * 3 + 1;
+            syracuseTable.push(inputNumber);
+        } else {
+            inputNumber = inputNumber / 2;
+            syracuseTable.push(inputNumber);
+        }
+    }
+    console.log(syracuse);
+    return syracuseTable;
 }
 
 /**
